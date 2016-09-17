@@ -1,0 +1,19 @@
+Topic and Game for the Team Project
+
+CS TOPIC THEORY - BINARY SEARCH
+The topic that I picked up for the team project was Binary Searching.
+In binary search the basic concept is that if you want to find a number from a list of sorted numbers ,
+you start with the middle element and check if it is bigger than the number to be searched then you move towards the elements 
+that are smaller than those i.e towards first element and ignore everything after middle element. If the middle element is 
+smaller then you start moving towards the bigger numbers i.e last element and ignore all the elements before middle element.
+You continue to do this recursively until you find the element.
+
+GAME FROM CS UNPLUGGED
+In the game the user will start from "Level 1" in which he will be given 16 cups and all the cups contain a ball with 
+a number under it.
+You need to find the number but will be given only 8 tries.
+
+As you move towards "Level 2" you will be given only 6 tries to find the number.
+
+In "Level 3" the player would get only 4 tries which are maximum tries required to find a number through binary search technique.
+In this level the player is supposed to find the middle element and subsequently move ahead.
