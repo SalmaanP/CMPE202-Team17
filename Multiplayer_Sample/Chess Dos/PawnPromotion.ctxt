@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=PawnPromotion
+comment0.text=\r\n\ PawnPromotion\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=color
+comment1.target=PawnPromotion(int)
+comment2.params=
+comment2.target=int\ getPromotion()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=type
+comment4.target=void\ update(int)
+comment5.params=world
+comment5.target=void\ addedToWorld(greenfoot.World)
+numComments=6

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=King
+comment0.text=\r\n\ King\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=color\ leftRook\ rightRook
+comment1.target=King(int,\ Rook,\ Rook)
+comment2.params=x\ y
+comment2.target=void\ move(int,\ int)
+comment3.params=
+comment3.target=void\ showHighlights()
+comment4.params=rook
+comment4.target=void\ showCastleHighlights(CastlePiece)
+numComments=5

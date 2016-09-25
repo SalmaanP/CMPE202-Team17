@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ImageUtil
+comment0.text=\r\n\ ImageUtil\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=image\ width\ height
+comment1.target=greenfoot.GreenfootImage\ scale(greenfoot.GreenfootImage,\ int,\ int)
+comment2.params=image\ pathWithName
+comment2.target=void\ saveToFile(greenfoot.GreenfootImage,\ java.lang.String)
+numComments=3
