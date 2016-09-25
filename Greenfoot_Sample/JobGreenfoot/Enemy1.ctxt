@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Enemy1
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ enemy1\ here.\r\n\ \r\n\ @author\ Hendra\ Wahyu\ Prasetya\r\n\ @version\ 0.1[20160524]\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ enemy1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ animMove()
+comment3.params=
+comment3.target=void\ detectCollision()
+comment4.params=
+comment4.target=void\ updatePoint()
+comment5.params=
+comment5.target=void\ checkLast()
+comment6.params=
+comment6.target=void\ removeBullet()
+comment7.params=
+comment7.target=void\ removeHero()
+numComments=8
