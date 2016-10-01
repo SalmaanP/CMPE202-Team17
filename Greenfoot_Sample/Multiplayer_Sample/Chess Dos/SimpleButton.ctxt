@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SimpleButton
+comment0.text=\r\n\ SimpleButton\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=image\ imageHover
+comment1.target=SimpleButton(greenfoot.GreenfootImage,\ greenfoot.GreenfootImage)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=int\ getWidth()
+comment4.params=
+comment4.target=int\ getHeight()
+numComments=5

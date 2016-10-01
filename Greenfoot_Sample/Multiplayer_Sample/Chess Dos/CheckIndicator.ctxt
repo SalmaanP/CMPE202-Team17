@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CheckIndicator
+comment0.text=\r\n\ CheckIndicator\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ hide()
+comment3.params=checkmate\ color
+comment3.target=void\ indicate(boolean,\ int)
+numComments=4

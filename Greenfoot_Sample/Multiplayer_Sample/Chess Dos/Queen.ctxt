@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Queen
+comment0.text=\r\n\ Queen\r\n\ \r\n\ @author\ Taylor\ Born\r\n\ @version\ February\ 2014\r\n
+comment1.params=color
+comment1.target=Queen(int)
+comment2.params=
+comment2.target=void\ showHighlights()
+numComments=3

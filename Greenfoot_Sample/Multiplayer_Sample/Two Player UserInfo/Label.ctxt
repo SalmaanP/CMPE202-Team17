@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=void\ setDefaultColor(java.awt.Color)
+comment1.params=text
+comment1.target=Label(java.lang.String)
+comment1.text=\n\ Create\ a\ new\ Label.\n\ @param\ text\ The\ text\ this\ label\ will\ display.\n\ @param\ leftJustifyInContainers\ Whether\ or\ not\ this\ Label\ will\ left\ justify\ within\ cells\ of\ Containers.\n
+comment2.params=
+comment2.target=greenfoot.GreenfootImage\ draw()
+comment2.text=\n\ Update\ this\ Label's\ image.\n
+comment3.params=
+comment3.target=int[]\ getTextAttributes()
+comment4.params=text
+comment4.target=void\ setText(java.lang.String)
+comment4.text=\n\ Set\ what\ text\ this\ Label\ will\ display.\n\ @param\ text\ The\ text\ this\ Label\ will\ display.\n
+comment5.params=
+comment5.target=java.lang.String\ getText()
+comment5.text=\n\ Get\ the\ text\ this\ Label\ is\ displaying.\n\ @return\ The\ text\ this\ Label\ is\ displaying.\n
+comment6.params=
+comment6.target=java.awt.Font\ getFont()
+comment6.text=\n\ Get\ the\ Font\ this\ Label\ is\ using.\n\ @return\ The\ Font\ this\ Label\ is\ using.\n
+comment7.params=font
+comment7.target=void\ setFont(java.awt.Font)
+comment7.text=\n\ Set\ the\ Font\ this\ Label\ is\ using.\n\ @param\ font\ The\ Font\ for\ this\ Label\ to\ use.\n
+comment8.params=c
+comment8.target=void\ setColor(java.awt.Color)
+numComments=9
