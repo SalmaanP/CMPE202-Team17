@@ -16,17 +16,7 @@ public class Weighingmachine extends Actor
     public void act() 
     {
         // Add your action code here.
-        if(start){
-            // weigh();
-            start = false;
-        }
+
     }    
     
-    public void weigh(){
-        for(int i=1;i<7;i++){
-            
-            this.setImage(i+".png");
-            Greenfoot.delay(50);
-        }
-    }
 }
