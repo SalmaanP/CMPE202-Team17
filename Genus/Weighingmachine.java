@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Weighingmachine extends Actor
 {
+    boolean start = true;
     /**
      * Act - do whatever the Weighingmachine wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +16,17 @@ public class Weighingmachine extends Actor
     public void act() 
     {
         // Add your action code here.
+        if(start){
+            // weigh();
+            start = false;
+        }
     }    
+    
+    public void weigh(){
+        for(int i=1;i<7;i++){
+            
+            this.setImage(i+".png");
+            Greenfoot.delay(50);
+        }
+    }
 }
