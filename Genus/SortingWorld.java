@@ -20,7 +20,7 @@ public class SortingWorld extends World
     IScreenHandler NameScreen = new NameScreen(this);
     IScreenHandler InformationScreen = new InformationScreen(this);
     IScreenHandler InstructionScreen = new InstructionScreen(this);
-    IScreenHandler screen = WelcomeScreen;
+    IScreenHandler screen = MainScreen;
     
     public SortingWorld()
     {    
