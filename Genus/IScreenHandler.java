@@ -6,6 +6,6 @@
  */
 public interface IScreenHandler  
 {
-    public void showScreen(ScreenType screenType);
+    public void showScreen();
     public void setNextScreen(IScreenHandler nextScreen);
 }

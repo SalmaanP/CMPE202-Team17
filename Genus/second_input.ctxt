@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=second_input
+comment1.params=
+comment1.target=second_input()
+comment2.params=
+comment2.target=void\ updateImage()
+comment3.params=image\ XClick\ YClick
+comment3.target=void\ ChangeMouseImage(greenfoot.GreenfootImage,\ int,\ int)
+comment4.params=
+comment4.target=void\ act()
+numComments=5

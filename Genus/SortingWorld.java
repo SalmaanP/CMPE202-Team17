@@ -14,26 +14,32 @@ public class SortingWorld extends World
      * 
      */
     private Button startButton;
-  
-
-    
+    IScreenHandler WelcomeScreen = new WelcomeScreen(this);
+    IScreenHandler MainScreen = new MainScreen(this);
+    IScreenHandler LeaderBoardScreen = new LeaderBoardScreen(this);
+    IScreenHandler NameScreen = new NameScreen(this);
+    IScreenHandler InformationScreen = new InformationScreen(this);
+    IScreenHandler InstructionScreen = new InstructionScreen(this);
+    IScreenHandler screen = WelcomeScreen;
     
     public SortingWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1); 
-        
+        screen.showScreen(); 
         // This goes in welcome screen
-        this.setBackground(new GreenfootImage("1_background.png"));
-        this.addObject(new first_title(), 500,60);
-        this.addObject(new first_scale(), 500,250);
-        this.addObject(new first_team(), 135,540);
-        this.addObject(new first_cmpe(), 925,550);
-        this.addObject(new first_playnow(), 500,450);
+
 
 
         
     }
     
-
+    public IScreenHandler getScreen(){
+        return screen;
+    }
+    
+    public void setScreen(IScreenHandler screen){
+        this.screen = screen;
+    }
+    
 }

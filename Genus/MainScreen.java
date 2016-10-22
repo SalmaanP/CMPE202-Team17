@@ -19,7 +19,7 @@ public class MainScreen  extends Screen
        this.nextScreen=nextScreen;
    }
    
-   public void showScreen(ScreenType screenType)
+   public void showScreen()
    {
        //write code for name screen
    }
