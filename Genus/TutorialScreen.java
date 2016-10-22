@@ -1,3 +1,5 @@
+import greenfoot.*;
+
 /**
  * Write a description of class TutorialScreen here.
  * 
@@ -8,6 +10,8 @@ public class TutorialScreen extends Screen
 {
     // instance variables - replace the example below with your own
    private IScreenHandler nextScreen = null;
+   SortingWorld world = (SortingWorld) this.sortingWorld;
+   private IScreenHandler MainScreen = new MainScreen(world);
 
     /**
      * Constructor for objects of class TutorialScreen
@@ -19,11 +23,23 @@ public class TutorialScreen extends Screen
 
    public void setNextScreen(IScreenHandler nextScreen)
    {
-       this.nextScreen=nextScreen;
+       world.setScreen(MainScreen);
+       removeScreen();
+       world.screen.showScreen();
    }
    
    public void showScreen()
    {
-       //write code for name screen
+        this.sortingWorld.setBackground(new GreenfootImage("4_background.png"));
+        this.sortingWorld.addObject(new fourth_letme(this.sortingWorld), 500,400);
+        this.sortingWorld.addObject(new fourth_title(), 520,150);
+        this.sortingWorld.addObject(new fourth_object(), 500,250);
    }
+   
+   public void removeScreen(){
+       
+       world.removeObjects(world.getObjects(fourth_letme.class));
+       world.removeObjects(world.getObjects(fourth_title.class));
+       world.removeObjects(world.getObjects(fourth_object.class));
+    }
 }

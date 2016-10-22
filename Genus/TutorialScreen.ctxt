@@ -8,4 +8,6 @@ comment2.params=nextScreen
 comment2.target=void\ setNextScreen(IScreenHandler)
 comment3.params=
 comment3.target=void\ showScreen()
-numComments=4
+comment4.params=
+comment4.target=void\ removeScreen()
+numComments=5
