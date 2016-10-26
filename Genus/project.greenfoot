@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Oct 25 22:30:49 PDT 2016
+#Tue Oct 25 22:43:57 PDT 2016
 target24.type=ClassTarget
 target16.name=second_input
 dependency85.to=fourth_object
@@ -577,9 +577,9 @@ class.first_title.superclass=assets
 dependency69.from=third_gotit
 dependency44.from=InformationScreen
 target15.height=50
-target25.y=250
-target5.name=Screen
 dependency71.from=third_gotit
+target5.name=Screen
+target25.y=250
 target25.x=190
 target19.width=130
 target7.width=110
@@ -587,17 +587,17 @@ target29.name=second_label
 target13.typeParameters=
 target9.y=910
 target9.x=10
-dependency50.to=second_label
 class.fourth_letme.superclass=assets
-dependency9.from=LeaderBoardScreen
+dependency50.to=second_label
 target1.y=10
+dependency9.from=LeaderBoardScreen
 target1.x=140
 class.WinningScreen.superclass=greenfoot.Actor
 dependency44.to=first_team
-dependency59.type=UsesDependency
 target3.width=100
+dependency59.type=UsesDependency
 dependency34.type=UsesDependency
-target10.height=50
 target14.y=550
+target10.height=50
 target14.x=130
 dependency38.to=InformationScreen
