@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Oct 25 23:19:36 PDT 2016
+#Tue Oct 25 23:30:33 PDT 2016
 target24.type=ClassTarget
 target16.name=second_input
 dependency85.to=fourth_object
@@ -38,12 +38,12 @@ dependency60.type=UsesDependency
 target14.showInterface=false
 dependency68.to=third_object
 target32.width=100
-class.Object.superclass=greenfoot.Actor
 mainWindow.width=1938
+class.Object.superclass=greenfoot.Actor
 target8.showInterface=false
 target1.typeParameters=
-class.Object1.superclass=Object
 target1.type=ClassTarget
+class.Object1.superclass=Object
 dependency35.type=UsesDependency
 target28.y=850
 target15.typeParameters=
@@ -119,8 +119,8 @@ target3.typeParameters=
 dependency35.from=SortingWorld
 dependency87.to=Weighingmachine
 target8.height=50
-class.Object6.superclass=Object
 target31.typeParameters=
+class.Object6.superclass=Object
 dependency48.type=UsesDependency
 dependency23.type=UsesDependency
 dependency75.type=UsesDependency
@@ -471,6 +471,7 @@ dependency70.type=UsesDependency
 target15.showInterface=false
 readme.name=@README
 target33.type=ClassTarget
+class.asset.superclass=assets
 class.fourth_title.superclass=assets
 class.Button.superclass=greenfoot.Actor
 dependency15.from=InformationScreen

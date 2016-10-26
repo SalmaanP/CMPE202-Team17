@@ -30,16 +30,19 @@ public class TutorialScreen extends Screen
    
    public void showScreen()
    {
-        this.sortingWorld.setBackground(new GreenfootImage("4_background.png"));
-        this.sortingWorld.addObject(new fourth_letme(this.sortingWorld), 500,400);
-        this.sortingWorld.addObject(new fourth_title(), 520,150);
-        this.sortingWorld.addObject(new fourth_object(), 500,250);
+       asset a1 = new asset();
+       a1.setImage("4_title.png");
+       asset a2 = new asset();
+       a2.setImage("4_object.png");
+       this.sortingWorld.setBackground(new GreenfootImage("4_background.png"));
+       this.sortingWorld.addObject(new fourth_letme(this.sortingWorld), 500,400);
+       this.sortingWorld.addObject(a1, 520,150);
+       this.sortingWorld.addObject(a2, 500,250);
    }
    
    public void removeScreen(){
        
        world.removeObjects(world.getObjects(fourth_letme.class));
-       world.removeObjects(world.getObjects(fourth_title.class));
-       world.removeObjects(world.getObjects(fourth_object.class));
+       world.removeObjects(world.getObjects(asset.class));
     }
 }

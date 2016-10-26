@@ -31,20 +31,25 @@ public class WelcomeScreen extends Screen
    
    public void showScreen()
    {
+       asset a1 = new asset();
+       asset a2 = new asset();
+       asset a3 = new asset();
+       asset a4 = new asset();
+       a1.setImage("1_title.png"); 
+       a2.setImage("1_scale.png"); 
+       a3.setImage("1_forkhead.png"); 
+       a4.setImage("1_cmpe.png"); 
         this.sortingWorld.setBackground(new GreenfootImage("1_background.png"));
-        this.sortingWorld.addObject(new first_title(), 500,60);
-        this.sortingWorld.addObject(new first_scale(), 500,250);
-        this.sortingWorld.addObject(new first_team(), 135,540);
-        this.sortingWorld.addObject(new first_cmpe(), 925,550);
+        this.sortingWorld.addObject(a1, 500,60);
+        this.sortingWorld.addObject(a2, 500,250);
+        this.sortingWorld.addObject(a3, 135,540);
+        this.sortingWorld.addObject(a4, 925,550);
         this.sortingWorld.addObject(new first_playnow(this.sortingWorld), 500,450);
 
    }
    
    public void removeScreen(){
-       world.removeObjects(world.getObjects(first_team.class));
-       world.removeObjects(world.getObjects(first_cmpe.class));
-       world.removeObjects(world.getObjects(first_title.class));
-       world.removeObjects(world.getObjects(first_scale.class));
+       world.removeObjects(world.getObjects(asset.class));
        world.removeObjects(world.getObjects(first_playnow.class));
     }
 }

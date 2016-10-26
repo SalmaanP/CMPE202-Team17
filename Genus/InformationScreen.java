@@ -28,17 +28,20 @@ public class InformationScreen extends Screen
    
    public void showScreen()
    {
-        this.sortingWorld.setBackground(new GreenfootImage("2_background.png"));
-        this.sortingWorld.addObject(new second_face(), 270,123);
-        this.sortingWorld.addObject(new second_goahead(this.sortingWorld), 500,400);
-        this.sortingWorld.addObject(new second_label(), 520,150);
-        this.sortingWorld.addObject(new second_input(), 500,250);
+       asset a1 = new asset();
+       asset a2 = new asset();
+       a1.setImage("2_object.png");
+       a2.setImage("2_title.png");
+       this.sortingWorld.setBackground(new GreenfootImage("2_background.png"));
+       this.sortingWorld.addObject(a1, 270,123);
+       this.sortingWorld.addObject(new second_goahead(this.sortingWorld), 500,400);
+       this.sortingWorld.addObject(a2, 520,150);
+       this.sortingWorld.addObject(new second_input(), 500,250);
    }
    
    public void removeScreen(){
-       world.removeObjects(world.getObjects(second_face.class));
+       world.removeObjects(world.getObjects(asset.class));
        world.removeObjects(world.getObjects(second_goahead.class));
-       world.removeObjects(world.getObjects(second_label.class));
        world.removeObjects(world.getObjects(second_input.class));
     }
 }
