@@ -15,10 +15,12 @@ public class Ball extends Actor
     
     
     private int weight;
+    private int Pos;
 
     public Ball(int weight, int Pos)
     {
         this.weight=weight;
+        this.Pos = Pos;
         
 
     }
@@ -39,5 +41,10 @@ public class Ball extends Actor
     public int getWeight()
     {
         return weight;
+    }
+    
+    public int getPos()
+    {
+        return Pos;
     }
 }

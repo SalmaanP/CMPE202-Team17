@@ -43,7 +43,7 @@ public class MainScreen  extends Screen
        
        
        world.addObject(weighingMachine, 500, 275);
-       world.addObject(ball1,100 ,500 );
+       world.addObject(ball1,ball1.getPos()*100 ,500 );
        world.addObject(ball7,250 ,500 );
        world.addObject(ball3,400 ,500 );
        world.addObject(ball4,550 ,500 );
