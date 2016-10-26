@@ -14,7 +14,6 @@ public class Ball extends Actor
      */
     
     
-    Ball ball1,ball2,ball3,ball4,ball5,ball6;
     private int weight;
 
     public Ball(int weight, int Pos)

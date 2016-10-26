@@ -41,7 +41,7 @@ public class Weighingmachine extends Actor
         // if(dragged1.getX()==415&&dragged1.getY()==308&&dragged2.getX()==580&&dragged2.getY()==308)
         if(ball1_set == true && ball2_set == true)
         {
-            if(dragged1.getWeight()>dragged2.getWeight())
+            if(dragged1.getWeight() > dragged2.getWeight())
             {
                 this.tiltLeft();
                 dragged1.setLocation(415,408);
