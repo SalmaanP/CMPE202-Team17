@@ -12,6 +12,9 @@ public class Ball extends Actor
      * Act - do whatever the Ball wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    
+    Ball ball1,ball2,ball3,ball4,ball5,ball6;
     private int weight;
 
     public Ball(int weight, int Pos)

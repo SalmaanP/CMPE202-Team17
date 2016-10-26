@@ -27,13 +27,14 @@ public class MainScreen  extends Screen
    {
        world.setBackground(new GreenfootImage("5_background.png"));
        Weighingmachine weighingMachine= new Weighingmachine();
-       world.addObject(weighingMachine, 500, 325);
-       world.addObject(new Ball(10,1),75 ,85 );
-       world.addObject(new Ball(6,2),75 ,185 );
-       world.addObject(new Ball(15,3),75 ,285 );
-       world.addObject(new Ball(20,4),75 ,385 );
-       world.addObject(new Ball(2,5),75 ,485 );
-       world.addObject(new Ball(7,6),75 ,585 );
+       world.addObject(weighingMachine, 500, 275);
+       world.addObject(new Object1(10,1),100 ,450 );
+       world.addObject(new Object2(6,2),200 ,450 );
+       world.addObject(new Object3(15,3),300 ,450 );
+       world.addObject(new Object4(20,4),400 ,450 );
+       world.addObject(new Object5(2,5),500 ,450 );
+        world.addObject(new Object6(2,5),600 ,450 );
        world.addObject(new Timer(),875 ,85 );
+       
    }
 }
