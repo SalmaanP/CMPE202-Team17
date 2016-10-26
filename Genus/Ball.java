@@ -20,6 +20,7 @@ public class Ball extends Actor
     public Ball(int weight, int Pos)
     {
         this.weight=weight;
+        
 
     }
     public void act() 
