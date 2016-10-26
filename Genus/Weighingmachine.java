@@ -8,12 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Weighingmachine extends Actor
 {
-    private Ball dragged1,dragged2;
+    private Ball dragged1=null,dragged2=null;
     boolean ball1_set=false,ball2_set=false;
     int tempPos;
     public void act() 
     {
+        if(dragged1==null&&ball1_set==false)
         dragged1=(Ball)getOneObjectAtOffset(-90, -7, Ball.class);
+        if(dragged2==null&&ball2_set==false)
         dragged2=(Ball)getOneObjectAtOffset(+80, -7, Ball.class);
         
        //Ball dragged=(Ball)getOneIntersectingObject(Ball.class);
@@ -55,9 +57,12 @@ public class Weighingmachine extends Actor
             }
             ball1_set = false;
             ball2_set = false;
+            
             Greenfoot.delay(100);
             dragged1.setLocation(75, 185);
             dragged2.setLocation(75, 85);
+            dragged1=null;
+            dragged2=null;
         }
         }
     }    
