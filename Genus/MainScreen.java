@@ -34,5 +34,6 @@ public class MainScreen  extends Screen
        world.addObject(new Ball(20,4),75 ,385 );
        world.addObject(new Ball(2,5),75 ,485 );
        world.addObject(new Ball(7,6),75 ,585 );
+       world.addObject(new Timer(),875 ,85 );
    }
 }
