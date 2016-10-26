@@ -13,9 +13,11 @@ public class Ball extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int weight;
-    public Ball(int weight)
+
+    public Ball(int weight, int Pos)
     {
         this.weight=weight;
+
     }
     public void act() 
     {

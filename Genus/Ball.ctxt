@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Ball
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ball\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=weight
-comment1.target=Ball(int)
+comment1.params=weight\ Pos
+comment1.target=Ball(int,\ int)
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
