@@ -11,7 +11,7 @@ public class InstructionScreen extends Screen
     // instance variables - replace the example below with your own
    private IScreenHandler nextScreen = null;
    SortingWorld world = (SortingWorld) this.sortingWorld;
-   private IScreenHandler TutorialScreen = new TutorialScreen(world); 
+   private IScreenHandler tutorialScreen = new TutorialScreen(world); 
    
    public InstructionScreen(SortingWorld world)
    {
@@ -20,7 +20,7 @@ public class InstructionScreen extends Screen
    
    public void setNextScreen(IScreenHandler nextScreen)
    {
-       world.setScreen(TutorialScreen);
+       world.setScreen(tutorialScreen);
        removeScreen();
        world.screen.showScreen();
    }

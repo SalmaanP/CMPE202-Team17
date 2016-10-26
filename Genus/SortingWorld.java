@@ -14,13 +14,13 @@ public class SortingWorld extends World
      * 
      */
     private Button startButton;
-    IScreenHandler WelcomeScreen = new WelcomeScreen(this);
-    IScreenHandler MainScreen = new MainScreen(this);
-    IScreenHandler LeaderBoardScreen = new LeaderBoardScreen(this);
-    IScreenHandler NameScreen = new NameScreen(this);
-    IScreenHandler InformationScreen = new InformationScreen(this);
-    IScreenHandler InstructionScreen = new InstructionScreen(this);
-    IScreenHandler screen = MainScreen;
+    IScreenHandler welcomeScreen = new WelcomeScreen(this);
+    IScreenHandler mainScreen = new MainScreen(this);
+    IScreenHandler leaderBoardScreen = new LeaderBoardScreen(this);
+    IScreenHandler nameScreen = new NameScreen(this);
+    IScreenHandler informationScreen = new InformationScreen(this);
+    IScreenHandler instructionScreen = new InstructionScreen(this);
+    IScreenHandler screen = mainScreen;
     
     public SortingWorld()
     {    

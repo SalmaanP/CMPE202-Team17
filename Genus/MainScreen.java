@@ -26,7 +26,6 @@ public class MainScreen  extends Screen
    public void showScreen()
    {
        world.setBackground(new GreenfootImage("5_background.png"));
-       //Button ball1,ball2,ball3,ball4,ball5,ball6;
        Weighingmachine weighingMachine= new Weighingmachine();
        world.addObject(weighingMachine, 500, 325);
        world.addObject(new Ball(10,1),75 ,85 );
