@@ -1,4 +1,5 @@
 import greenfoot.*;  
+import java.util.*;
 /**
  * Write a description of class MainScreen here.
  * 
@@ -28,23 +29,34 @@ public class MainScreen  extends Screen
    {
        world.setBackground(new GreenfootImage("5_background.png"));
        Weighingmachine weighingMachine= new Weighingmachine();
-       Ball ball1 = new Ball(10,1);
+       Ball ball1 = new Ball(1,1);
        ball1.setImage("yarn.png");
-       Ball ball3 = new Ball(15,3);
+       Ball ball2 = new Ball(2,2);
+       ball2.setImage("frog.png");
+       Ball ball3 = new Ball(3,3);
        ball3.setImage("cart.png");
-       Ball ball4 = new Ball(20,4);
+       Ball ball4 = new Ball(4,4);
        ball4.setImage("bag.png");
-       Ball ball5 = new Ball(2,5);
+       Ball ball5 = new Ball(5,5);
        ball5.setImage("robo.png");
-       Ball ball6 = new Ball(3,6);
+       Ball ball6 = new Ball(6,6);
        ball6.setImage("light.png");
-       Ball ball7 = new Ball(30,2);
-       ball7.setImage("frog.png");
+       
+       Ball [] balls = {ball1,ball2,ball3,ball4,ball5,ball6};
+       final List<Ball> ball_list = new ArrayList<Ball>(Arrays.asList(balls));
+       Random rand =  new Random();
+       
+
+        for(int i = 0; (i<5) && (ball_list.size() > 0); i ++) {
+            final int randomIndex = rand.nextInt(ball_list.size());
+            Ball temp = ball_list.remove(randomIndex);
+            System.out.println(temp.getPos());
+        }
        
        
        world.addObject(weighingMachine, 500, 275);
        world.addObject(ball1,ball1.getPos()*100 ,500 );
-       world.addObject(ball7,250 ,500 );
+       world.addObject(ball2,ball2.getPos()*125 ,500 );
        world.addObject(ball3,400 ,500 );
        world.addObject(ball4,550 ,500 );
        world.addObject(ball5,700 ,500 );
