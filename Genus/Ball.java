@@ -16,7 +16,7 @@ public class Ball extends Actor
     
     private int weight;
     private int Pos;
-    private int X;
+    private int XCoord;
 
     public Ball(int weight)
     {
@@ -54,27 +54,27 @@ public class Ball extends Actor
             
             case 1:
                 this.Pos = 1;
-                this.X = 100;
+                this.XCoord = 100;
                 break;
             case 2:
                 this.Pos = 2;
-                this.X = 250;
+                this.XCoord = 250;
                 break;
             case 3:
                 this.Pos = 3;
-                this.X = 400;
+                this.XCoord = 400;
                 break;
             case 4:
                 this.Pos = 4;
-                this.X = 550;
+                this.XCoord = 550;
                 break;
             case 5:
                 this.Pos = 5;
-                this.X = 700;
+                this.XCoord = 700;
                 break;
             case 6:
                 this.Pos = 6;
-                this.X = 850;
+                this.XCoord = 850;
                 break;
             
         }
@@ -82,7 +82,7 @@ public class Ball extends Actor
         
     }
     
-    public int getX(){
-        return this.X;
+    public int getXCoord(){
+        return this.XCoord;
     }
 }

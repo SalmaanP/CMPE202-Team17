@@ -12,5 +12,5 @@ comment4.target=int\ getPos()
 comment5.params=p
 comment5.target=void\ setPos(int)
 comment6.params=
-comment6.target=int\ getX()
+comment6.target=int\ getXCoord()
 numComments=7
