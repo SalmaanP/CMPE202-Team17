@@ -27,6 +27,11 @@ public class Weighingmachine extends Actor
                 dragged1.setLocation(415, 270);
                 ball1_set=true;
             }
+            else
+            {
+                ball1_set=false;
+                dragged1=null;
+            }
         }
         if(dragged2!=null&&Greenfoot.mouseDragEnded(dragged2))
         {
@@ -36,6 +41,11 @@ public class Weighingmachine extends Actor
                 dragged2.setLocation(580, 270);
                 ball2_set = true;
 
+            }
+            else
+            {
+                ball2_set=false;
+                dragged2=null;
             }
         }
         if(dragged1!=null &&dragged2!=null)
@@ -64,6 +74,11 @@ public class Weighingmachine extends Actor
             equilibrium();
             dragged1=null;
             dragged2=null;
+        }
+        else
+        {
+            //dragged1=null;
+            //dragged2=null;
         }
         }
     }    
