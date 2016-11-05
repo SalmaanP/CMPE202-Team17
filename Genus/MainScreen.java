@@ -40,7 +40,7 @@ public class MainScreen  extends Screen
        world.setBackground(new GreenfootImage("5_background.png"));
        Weighingmachine weighingMachine= new Weighingmachine();
        world.addObject(weighingMachine, 500, 275);
-      for (int i = 1; i <= 6; i++){           
+      for (int i = 0; i <= 5; i++){           
            temp_ball = new Ball(i);
            
            
@@ -49,9 +49,9 @@ public class MainScreen  extends Screen
            temp_ball.setPos(temp_pos);
            
            //temp_ball.setImage("ball_"+i+"_"+temp_pos);
+           temp_ball.setImage("ball_"+i+"_"+rand.nextInt(4)+".png");
            System.out.println(temp_pos + " ");
            temp_pos = (((3*temp_pos)-1)*50);
-           System.out.println(i);
            world.addObject(temp_ball,temp_pos ,500 );
        
       }
