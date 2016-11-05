@@ -17,6 +17,7 @@ public class Ball extends Actor
     private int weight;
     private int Pos;
     private int XCoord;
+    private boolean locked = false;
 
     public Ball(int weight)
     {
@@ -29,12 +30,14 @@ public class Ball extends Actor
         
         int mouseX, mouseY ;
         
-        if(Greenfoot.mouseDragged(this)) {          
-            MouseInfo mouse = Greenfoot.getMouseInfo();  
-            mouseX=mouse.getX();  
-            mouseY=mouse.getY();  
-            setLocation(mouseX, mouseY);  
-        } 
+        if(!locked){
+            if(Greenfoot.mouseDragged(this)) {          
+                MouseInfo mouse = Greenfoot.getMouseInfo();  
+                mouseX=mouse.getX();  
+                mouseY=mouse.getY();  
+                setLocation(mouseX, mouseY);  
+            } 
+        }
         
     }   
     
@@ -84,5 +87,9 @@ public class Ball extends Actor
     
     public int getXCoord(){
         return this.XCoord;
+    }
+    
+    public void lockBall(){
+        this.locked = true;
     }
 }
