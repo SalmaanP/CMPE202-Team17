@@ -24,7 +24,7 @@ public class Weighingmachine extends Actor
             System.out.println(dragged1.getX());
             if(dragged1.getX()>385&&dragged1.getX()<435)
             {
-                dragged1.setLocation(415, 308);
+                dragged1.setLocation(415, 270);
                 ball1_set=true;
             }
         }
@@ -33,26 +33,26 @@ public class Weighingmachine extends Actor
             System.out.println(dragged2.getX());
             if(dragged2.getX()>550&&dragged2.getX()<620)
             {
-                dragged2.setLocation(580, 308);
+                dragged2.setLocation(580, 270);
                 ball2_set = true;
 
             }
         }
         if(dragged1!=null &&dragged2!=null)
         {
-        // if(dragged1.getX()==415&&dragged1.getY()==308&&dragged2.getX()==580&&dragged2.getY()==308)
         if(ball1_set == true && ball2_set == true)
         {
             if(dragged1.getWeight() > dragged2.getWeight())
             {
                 this.tiltLeft();
-                dragged1.setLocation(415,408);
-                
+                dragged1.setLocation(415,310);
+                dragged2.setLocation(580,234);
             }
             else
             {
                 this.tiltRight();
-                dragged2.setLocation(615,408);
+                dragged2.setLocation(580,310);
+                dragged1.setLocation(415,234);
 
             }
             ball1_set = false;
@@ -61,6 +61,7 @@ public class Weighingmachine extends Actor
             Greenfoot.delay(100);
             dragged1.setLocation(75, 185);
             dragged2.setLocation(75, 85);
+            equilibrium();
             dragged1=null;
             dragged2=null;
         }
