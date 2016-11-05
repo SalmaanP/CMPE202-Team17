@@ -94,7 +94,7 @@ public class MainScreen  extends Screen
        // world.addObject(ball4,ball4.getX() ,500 );
        // world.addObject(ball5,ball5.getX() ,500 );
        // world.addObject(ball6,ball6.getX() ,500 );
-       // world.addObject(new Timer(),875 ,85 );
+        world.addObject(new Timer(),875 ,85 );
        
    }
 }
