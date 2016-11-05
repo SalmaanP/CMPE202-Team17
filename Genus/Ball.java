@@ -16,11 +16,11 @@ public class Ball extends Actor
     
     private int weight;
     private int Pos;
+    private int X;
 
-    public Ball(int weight, int Pos)
+    public Ball(int weight)
     {
         this.weight=weight;
-        this.Pos = Pos;
         
 
     }
@@ -46,5 +46,43 @@ public class Ball extends Actor
     public int getPos()
     {
         return Pos;
+    }
+    
+    public void setPos(int p){
+        
+        switch(p){
+            
+            case 1:
+                this.Pos = 1;
+                this.X = 100;
+                break;
+            case 2:
+                this.Pos = 2;
+                this.X = 250;
+                break;
+            case 3:
+                this.Pos = 3;
+                this.X = 400;
+                break;
+            case 4:
+                this.Pos = 4;
+                this.X = 550;
+                break;
+            case 5:
+                this.Pos = 5;
+                this.X = 700;
+                break;
+            case 6:
+                this.Pos = 6;
+                this.X = 850;
+                break;
+            
+        }
+        
+        
+    }
+    
+    public int getX(){
+        return this.X;
     }
 }
