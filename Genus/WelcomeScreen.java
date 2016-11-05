@@ -35,8 +35,8 @@ public class WelcomeScreen extends Screen
        asset a2 = new asset();
        asset a3 = new asset();
        asset a4 = new asset();
-       a1.setImage("1_title.png"); 
-       a2.setImage("1_scale.png"); 
+       a2.setImage("1_title.png"); 
+      // a2.setImage("1_scale.png"); 
        a3.setImage("1_forkhead.png"); 
        a4.setImage("1_cmpe.png"); 
         this.sortingWorld.setBackground(new GreenfootImage("1_background.png"));
