@@ -16,3 +16,5 @@ Team Members:
 * Shrey Bhatt
 
 More information will be added as the project continues.
+
+![alt text] (https://github.com/SalmaanP/CMPE202-Team17/blob/master/Concept%2520Art/GAMEPAGE.png "Game Page")
