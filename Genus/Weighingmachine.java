@@ -12,24 +12,29 @@ public class Weighingmachine extends Actor
     boolean ball1_set=false,ball2_set=false;
     int tempPos;
     int lockedBalls=0;
+    
     public void act() 
     {
-        
-        if(dragged1==null&&ball1_set==false)
-        dragged1=(Ball)getOneObjectAtOffset(-90, -7, Ball.class);
-        if(dragged2==null&&ball2_set==false)
-        dragged2=(Ball)getOneObjectAtOffset(+80, -7, Ball.class);
-        
-        if(lockedBalls==6)
-        {
-            SortingWorld world=(SortingWorld)this.getWorld();
-            MainScreen screen= (MainScreen)world.screen;
-            screen.setNextScreen(new LeaderBoardScreen(world));
-        }
+       if(dragged1==null&&ball1_set==false)
+            dragged1=(Ball)getOneObjectAtOffset(-90, -7, Ball.class);
+            
+       if(dragged2==null&&ball2_set==false)
+            dragged2=(Ball)getOneObjectAtOffset(+80, -7, Ball.class);
+       
+       if(lockedBalls==6)
+       {
+           SortingWorld world=(SortingWorld)this.getWorld();
+           MainScreen screen= (MainScreen)world.screen;
+           screen.setNextScreen(new LeaderBoardScreen(world));
+       } 
+            
        //Ball dragged=(Ball)getOneIntersectingObject(Ball.class);
-        if(dragged1!=null&&Greenfoot.mouseDragEnded(dragged1))
-        {
-            System.out.println(dragged1.getX());
+       
+       //Left weighing scale logic - puts the ball at center and sets ball1_set to true
+       if(dragged1!=null&&Greenfoot.mouseDragEnded(dragged1))
+       {
+            //System.out.println(dragged1.getX());
+            
             if(dragged1.getX()>385&&dragged1.getX()<435)
             {
                 dragged1.setLocation(415, 270);
@@ -40,9 +45,11 @@ public class Weighingmachine extends Actor
                 ball1_set=false;
                 dragged1=null;
             }
-        }
-        if(dragged2!=null&&Greenfoot.mouseDragEnded(dragged2))
-        {
+       }
+        
+       //Right weighing scale logic - puts the ball at center and sets ball2_set to true
+       if(dragged2!=null&&Greenfoot.mouseDragEnded(dragged2))
+       {
             System.out.println(dragged2.getX());
             if(dragged2.getX()>550&&dragged2.getX()<620)
             {
@@ -55,22 +62,20 @@ public class Weighingmachine extends Actor
                 ball2_set=false;
                 dragged2=null;
             }
-        }
-        if(dragged1!=null &&dragged2!=null)
-        {
+       }
+        
+       //When both balls are set, check weight and swap if required.
+       if(dragged1!=null &&dragged2!=null)
+       {
         if(ball1_set == true && ball2_set == true)
         {
             if(dragged1.getWeight() > dragged2.getWeight())
             {
-                this.tiltLeft();
-                dragged1.setLocation(415,310);
-                dragged2.setLocation(580,234);
+                this.tilt("Left", dragged1, dragged2);
             }
             else
             {
-                this.tiltRight();
-                dragged2.setLocation(580,310);
-                dragged1.setLocation(415,234);
+                this.tilt("Right", dragged1, dragged2);
 
             }
             ball1_set = false;
@@ -78,40 +83,45 @@ public class Weighingmachine extends Actor
             
             Greenfoot.delay(100);
             swapBalls(dragged1, dragged2);
-            equilibrium();
+            this.tilt("Equilibrium", dragged1, dragged2);
             dragged1=null;
             dragged2=null;
         }
-        else
-        {
-            //dragged1=null;
-            //dragged2=null;
-        }
-        }
+       }
     }    
     
-    public void tiltLeft()
+    public void tilt(String direction, Ball b1, Ball b2)
     {
-        for(int i=1;i<8;i++)
+        if(direction == "Left")
         {
-            this.setImage(new GreenfootImage(i+".png"));
-            Greenfoot.delay(1);
+            for(int i=1;i<8;i++)
+            {
+                this.setImage(new GreenfootImage(i+".png"));
+                b1.setLocation(415,(270+(i*5)));
+                b2.setLocation(580,(270-(i*5)));
+                Greenfoot.delay(1);
+            }
         }
-    }
     
-    public void tiltRight()
-    {
-        for(int i=1;i<8;i++)
+        else if(direction == "Right")
         {
-            this.setImage(new GreenfootImage(i+"_r.png"));
-            Greenfoot.delay(1);
+            for(int i=1;i<8;i++)
+            {
+                this.setImage(new GreenfootImage(i+"_r.png"));
+                b2.setLocation(580,(270+(i*5)));
+                b1.setLocation(415,(270-(i*5)));
+                Greenfoot.delay(1);
+            }
+        }
+        else if(direction == "Equilibrium")
+        {
+            this.setImage(new GreenfootImage("1.png"));
         }
     }
     
     public void equilibrium(){
     
-        this.setImage(new GreenfootImage("1.png"));
-        
+        this.setImage(new GreenfootImage("1.png"));       
         
     }
     
@@ -164,9 +174,9 @@ public class Weighingmachine extends Actor
         
     }
     
-    
     public int getLockedBallsCount()
     {
-        return lockedBalls;
+         return lockedBalls;
     }
+    
 }
