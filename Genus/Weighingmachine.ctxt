@@ -13,4 +13,6 @@ comment5.params=b1\ b2
 comment5.target=void\ swapBalls(Ball,\ Ball)
 comment6.params=b1\ b2
 comment6.target=void\ checkLocks(Ball,\ Ball)
-numComments=7
+comment7.params=
+comment7.target=int\ getLockedBallsCount()
+numComments=8

@@ -11,13 +11,21 @@ public class Weighingmachine extends Actor
     private Ball dragged1=null,dragged2=null;
     boolean ball1_set=false,ball2_set=false;
     int tempPos;
+    int lockedBalls=0;
     public void act() 
     {
+        
         if(dragged1==null&&ball1_set==false)
         dragged1=(Ball)getOneObjectAtOffset(-90, -7, Ball.class);
         if(dragged2==null&&ball2_set==false)
         dragged2=(Ball)getOneObjectAtOffset(+80, -7, Ball.class);
         
+        if(lockedBalls==6)
+        {
+            SortingWorld world=(SortingWorld)this.getWorld();
+            MainScreen screen= (MainScreen)world.screen;
+            screen.setNextScreen(new LeaderBoardScreen(world));
+        }
        //Ball dragged=(Ball)getOneIntersectingObject(Ball.class);
         if(dragged1!=null&&Greenfoot.mouseDragEnded(dragged1))
         {
@@ -147,11 +155,18 @@ public class Weighingmachine extends Actor
         System.out.println("b2 weight:"+b2.getWeight());        
         if(b1.getPos() == b1.getWeight()){
             b1.lockBall();
+            lockedBalls++;
         }
         if(b2.getPos() == b2.getWeight()){
             b2.lockBall();
+            lockedBalls++;
         }    
         
     }
     
+    
+    public int getLockedBallsCount()
+    {
+        return lockedBalls;
+    }
 }

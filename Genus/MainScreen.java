@@ -11,18 +11,23 @@ public class MainScreen  extends Screen
     // instance variables - replace the example below with your own
     private IScreenHandler nextScreen = null;
     private SortingWorld world;
-   
-   
+    private IScreenHandler leaderBoardScreen;
+    private List<Actor> screenObjectList;
+    
    public MainScreen(SortingWorld world)
    {
        super(world);
        this.world=world;
+       leaderBoardScreen=new LeaderBoardScreen(world);
+       screenObjectList= new ArrayList<Actor>();
        
    }
    
    public void setNextScreen(IScreenHandler nextScreen)
    {
-       this.nextScreen=nextScreen;
+       this.world.setScreen(nextScreen);
+       removeScreen();
+       world.screen.showScreen();
    }
    
    public void showScreen()
@@ -40,9 +45,10 @@ public class MainScreen  extends Screen
        world.setBackground(new GreenfootImage("5_background.png"));
        Weighingmachine weighingMachine= new Weighingmachine();
        world.addObject(weighingMachine, 500, 275);
+       screenObjectList.add(weighingMachine);
       for (int i = 1; i <= 6; i++){           
            temp_ball = new Ball(i);
-           
+           screenObjectList.add(temp_ball);
            
            //temp_pos = rand.nextInt(5);
            temp_pos = ballPos.remove(0);
@@ -55,6 +61,8 @@ public class MainScreen  extends Screen
            world.addObject(temp_ball,temp_pos ,500 );
        
       }
+    
+      
        //put for loop here
        // Ball ball1 = new Ball(1);
        // ball1.setImage("yarn.png");
@@ -94,7 +102,16 @@ public class MainScreen  extends Screen
        // world.addObject(ball4,ball4.getX() ,500 );
        // world.addObject(ball5,ball5.getX() ,500 );
        // world.addObject(ball6,ball6.getX() ,500 );
-        world.addObject(new Timer(),875 ,85 );
+       Timer timer= new Timer();
+        world.addObject(timer,875 ,85 );
+        screenObjectList.add(timer);
        
+   }
+   
+   public void removeScreen()
+   {
+       world.removeObjects(world.getObjects(Ball.class));
+       world.removeObjects(world.getObjects(Timer.class));
+       world.removeObjects(world.getObjects(Weighingmachine.class));
    }
 }
