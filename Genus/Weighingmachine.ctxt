@@ -13,4 +13,6 @@ comment5.params=b1\ b2
 comment5.target=void\ checkLocks(Ball,\ Ball)
 comment6.params=
 comment6.target=int\ getLockedBallsCount()
-numComments=7
+comment7.params=object\ finalX\ finalY
+comment7.target=void\ transitionBalls(Ball,\ int,\ int)
+numComments=8

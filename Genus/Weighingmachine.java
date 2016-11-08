@@ -133,7 +133,9 @@ public class Weighingmachine extends Actor
         temp = b1.getPos();
         b1.setPos(b2.getPos());
         b2.setPos(temp);
+        transitionBalls(b1, b1.getXCoord(), 500);
         b1.setLocation(b1.getXCoord(), 500);
+        transitionBalls(b2, b2.getXCoord(), 500);
         b2.setLocation(b2.getXCoord(), 500);
         checkLocks(b1, b2);
        } 
@@ -143,7 +145,10 @@ public class Weighingmachine extends Actor
         temp = b1.getPos();
         b1.setPos(b2.getPos());
         b2.setPos(temp);
+        transitionBalls(b1, b1.getXCoord(), 500);
         b1.setLocation(b1.getXCoord(), 500);
+         
+         transitionBalls(b2, b2.getXCoord(), 500);
         b2.setLocation(b2.getXCoord(), 500); 
         checkLocks(b1, b2);   
        } 
@@ -151,7 +156,9 @@ public class Weighingmachine extends Actor
        {
         checkLocks(b1, b2);   
         System.out.println("ye else vala hai");
+        transitionBalls(b1, b1.getXCoord(), 500);
         b1.setLocation(b1.getXCoord(), 500);
+        transitionBalls(b2, b2.getXCoord(), 500);
         b2.setLocation(b2.getXCoord(), 500);   
        } 
         
@@ -179,4 +186,23 @@ public class Weighingmachine extends Actor
          return lockedBalls;
     }
     
+    private void transitionBalls(Ball object,int finalX, int finalY)
+    {
+        int diffX=finalX-object.getX();
+        System.out.println("DiffX:"+diffX);
+        
+        int diffY=Math.abs(object.getY()-finalY);
+        System.out.println("DiffY:"+diffY);
+        int incrementX=diffX/10;
+        int incrementY=diffY/10;
+        int tempX=object.getX()+incrementX;
+        int tempY=object.getY()+incrementY;
+        for(int i=0;i<10;i++)
+        {
+            object.setLocation(tempX,tempY);
+            tempX=tempX+incrementX;
+            tempY=tempY+incrementY;
+            Greenfoot.delay(10);
+        }
+    }
 }
