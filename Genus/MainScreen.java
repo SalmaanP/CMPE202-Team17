@@ -11,21 +11,20 @@ public class MainScreen  extends Screen
     // instance variables - replace the example below with your own
     private IScreenHandler nextScreen = null;
     private SortingWorld world;
-    private IScreenHandler leaderBoardScreen;
-    private List<Actor> screenObjectList;
-    
+    private LeaderBoardScreen leaderBoardScreen;
+    private Timer timer;
    public MainScreen(SortingWorld world)
    {
        super(world);
        this.world=world;
        leaderBoardScreen=new LeaderBoardScreen(world);
-       screenObjectList= new ArrayList<Actor>();
-       
    }
    
    public void setNextScreen(IScreenHandler nextScreen)
    {
-       this.world.setScreen(nextScreen);
+       leaderBoardScreen=(LeaderBoardScreen)nextScreen;
+       leaderBoardScreen.setTimer(timer.getTime());
+       this.world.setScreen(leaderBoardScreen);
        removeScreen();
        world.screen.showScreen();
    }
@@ -45,10 +44,8 @@ public class MainScreen  extends Screen
        world.setBackground(new GreenfootImage("5_background.png"));
        Weighingmachine weighingMachine= new Weighingmachine();
        world.addObject(weighingMachine, 500, 275);
-       screenObjectList.add(weighingMachine);
       for (int i = 1; i <= 6; i++){           
            temp_ball = new Ball(i);
-           screenObjectList.add(temp_ball);
            
            //temp_pos = rand.nextInt(5);
            temp_pos = ballPos.remove(0);
@@ -102,9 +99,8 @@ public class MainScreen  extends Screen
        // world.addObject(ball4,ball4.getX() ,500 );
        // world.addObject(ball5,ball5.getX() ,500 );
        // world.addObject(ball6,ball6.getX() ,500 );
-       Timer timer= new Timer();
+        timer= new Timer();
         world.addObject(timer,875 ,85 );
-        screenObjectList.add(timer);
        
    }
    
