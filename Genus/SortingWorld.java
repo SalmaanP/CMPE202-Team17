@@ -29,9 +29,9 @@ public class SortingWorld extends World
         Greenfoot.playSound("game_sound.mp3");
         screen.showScreen(); 
         // This goes in welcome screen
-  ScoreBoard scoreboard = new ScoreBoard(this);
+        //ScoreBoard scoreboard = new ScoreBoard(this);
 
-        scoreboard.setScore();
+       // scoreboard.setScore();
 
 
         
