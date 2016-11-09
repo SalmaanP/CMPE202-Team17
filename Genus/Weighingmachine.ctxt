@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=int\ getLockedBallsCount()
 comment7.params=object\ finalX\ finalY
 comment7.target=void\ transitionBalls(Ball,\ int,\ int)
-numComments=8
+comment8.params=direction
+comment8.target=void\ animateScale(java.lang.String)
+numComments=9

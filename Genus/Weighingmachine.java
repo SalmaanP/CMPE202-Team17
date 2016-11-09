@@ -202,7 +202,13 @@ public class Weighingmachine extends Actor
             object.setLocation(tempX,tempY);
             tempX=tempX+incrementX;
             tempY=tempY+incrementY;
-            Greenfoot.delay(10);
+            Greenfoot.delay(1);
         }
+    }
+    
+    public void animateScale(String direction){
+        
+        
+        
     }
 }
