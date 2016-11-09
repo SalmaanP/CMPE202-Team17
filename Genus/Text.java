@@ -9,24 +9,22 @@ import java.awt.Color;
 */
 public class Text extends Actor
 {
-   /**
-    * Act - do whatever the Text wants to do. This method is called whenever
-    * the 'Act' or 'Run' button gets pressed in the environment.
-    */
-   private Color color = Color.orange;
-   public void act() 
-   {
-       // Add your action code here.
-   }    
+  GreenfootImage image;
+    public void act() 
+    {
+       
+    }
+    
+    Text()
+    {
+        image= this.getImage();
+        setImage(image);
+    }
+    
+    public void setMessage(String message)
+    {
+        image.setColor( java.awt.Color.BLACK );
+        image.drawString(message,25, 50);
+    }
    
-   public Text(String text, Color color)
-   {
-       this.color = color;
-       updateImage(text);
-   }
-
-   public void updateImage(String text)
-   {
-       setImage(new GreenfootImage(text, 18, color, new Color(0, 0, 0, 0)));
-   }
 }

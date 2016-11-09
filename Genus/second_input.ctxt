@@ -8,4 +8,6 @@ comment3.params=image\ XClick\ YClick
 comment3.target=void\ ChangeMouseImage(greenfoot.GreenfootImage,\ int,\ int)
 comment4.params=
 comment4.target=void\ act()
-numComments=5
+comment5.params=
+comment5.target=java.lang.String\ getUserName()
+numComments=6

@@ -22,6 +22,7 @@ public class ScoreBoard extends Actor
    int perc;
    Text scoreText, percText;
    World w;
+   String leaderBoardData;
    public ScoreBoard(World w){
         this.w = w;
         //setImage("images/score_board.png");
@@ -31,9 +32,9 @@ public class ScoreBoard extends Actor
        // Add your action code here.
    }    
    
-   public void setScore(){
+   public void setScore(String user,int score){
        try{
-        URL url = new URL("http://localhost:3000/setScores?username=karan&score=100");
+        URL url = new URL("http://localhost:3000/setScores?username="+user+"&score="+score+"");
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Accept", "application/json");
@@ -49,7 +50,8 @@ public class ScoreBoard extends Actor
 		String output;
 	
 		while ((output = br.readLine()) != null) {
-			System.out.println(output);
+			leaderBoardData=output;
+		    System.out.println(output);
 		}
 
 		conn.disconnect();
@@ -66,18 +68,13 @@ public class ScoreBoard extends Actor
 		e.printStackTrace();
 
 	  }
-      this.score = score;
-       this.perc = perc;
-      
-       if(scoreText != null){
-           w.removeObject(scoreText);
-       }
-       if(percText != null){
-           w.removeObject(percText);
-       }
-       scoreText = new Text("Score : "+String.valueOf(score), Color.black);
-       //w.addObject(scoreText,getX()-10,getY()-10);
+    
       
    }    
+   
+   public String getLeaderBoardData()
+   {
+       return leaderBoardData;
+    }
    
 }

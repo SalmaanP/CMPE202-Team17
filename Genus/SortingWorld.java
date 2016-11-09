@@ -21,6 +21,7 @@ public class SortingWorld extends World
     IScreenHandler informationScreen = new InformationScreen(this);
     IScreenHandler instructionScreen = new InstructionScreen(this);
     IScreenHandler screen = welcomeScreen;
+    private String user;
     
     public SortingWorld()
     {    
@@ -45,4 +46,13 @@ public class SortingWorld extends World
         this.screen = screen;
     }
     
+    public void setUser(String username)
+    {
+        user=username;
+    }
+    
+    public String getUser()
+    {
+        return user;
+    }
 }

@@ -54,4 +54,9 @@ public class second_input extends assets
        if (key.length() == 1 && text.length() < MAX_INPUT_LENGTH) text += key;
        updateImage();
    }
+   
+   public String getUserName()
+   {
+       return text;
+    }
 }

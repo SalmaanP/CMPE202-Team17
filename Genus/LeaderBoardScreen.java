@@ -11,6 +11,8 @@ public class LeaderBoardScreen extends Screen
     private IScreenHandler nextScreen = null;
     SortingWorld world = (SortingWorld) this.sortingWorld;
     private int timer=0;
+    private String leaderBoardData;
+    private String[] names,scores;
    public LeaderBoardScreen(SortingWorld world)
    {
        super(world);
@@ -25,6 +27,20 @@ public class LeaderBoardScreen extends Screen
    {
        world.setBackground(new GreenfootImage("2_background.png"));
        System.out.println("Time taken to sort:"+timer);
+       ScoreBoard scoreboard= new ScoreBoard(world);
+       scoreboard.setScore(world.getUser(),timer);
+       leaderBoardData=scoreboard.getLeaderBoardData();
+       parseLeaderBoardData();
+       
+       for(int i=0;i<names.length;i++)
+       {
+           Text name= new Text();
+           Text score=new Text();
+           name.setMessage(names[i]);
+           score.setMessage(scores[i]);
+           world.addObject(name,150,(i+1)*100);
+           world.addObject(score,300,(i+1)*100);
+        }
        //write code for name screen
    }
    
@@ -32,4 +48,12 @@ public class LeaderBoardScreen extends Screen
    {
        timer=time;
    }
+   
+   private void parseLeaderBoardData()
+   {
+       String arr[]=leaderBoardData.split("#");
+       names=arr[0].split(",");
+       scores=arr[1].split(",");
+       
+    }
 }

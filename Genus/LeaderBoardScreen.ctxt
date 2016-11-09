@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=void\ showScreen()
 comment4.params=time
 comment4.target=void\ setTimer(int)
-numComments=5
+comment5.params=
+comment5.target=void\ parseLeaderBoardData()
+numComments=6
