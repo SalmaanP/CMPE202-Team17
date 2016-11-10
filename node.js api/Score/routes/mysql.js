@@ -38,7 +38,6 @@ function CreateConnectionPool() {
 
 	}
 }
-
 function getConnection(callback) {
 
 	console.log("connection requested");

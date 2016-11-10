@@ -52,7 +52,7 @@ exports.checkRoom = function (req, res) {
         } else {
             answer = {"ready": "yes"};
         }
-       //res.send(JSON.stringify(answer));
+        //res.send(JSON.stringify(answer));
         res.send(answer);
 
     }, query);
@@ -99,12 +99,24 @@ exports.getGame = function (req, res) {
 
 exports.topTen = function (req, res) {
 
-   var  query = "select * from user Order by score ASC limit 10";
+    var query = "select * from user Order by score ASC limit 10";
     mysql.execute(function (err, result) {
 
         res.send(result);
 
     }, query);
+
+};
+
+exports.getRank = function (req, res) {
+
+    var score = req.param("score");
+    var getRank = "select count(*) as rank from user where score<" + score;
+    mysql.execute(function (err, result) {
+        result[0].rank = result[0].rank + 1;
+        res.send(result);
+
+    }, getRank);
 
 };
 

@@ -18,7 +18,7 @@ app.get('/setScores', score.setScores);
 app.get('/getGame', score.getGame);
 app.get('/checkRoom', score.checkRoom);
 app.get('/topTen', score.topTen);
-
+app.get('/getRank', score.getRank);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
