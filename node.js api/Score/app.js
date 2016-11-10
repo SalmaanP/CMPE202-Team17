@@ -16,6 +16,7 @@ var app = express();
 
 app.get('/setScores', score.setScores);
 app.get('/getGame', score.getGame);
+app.get('/checkRoom', score.checkRoom);
 
 
 // view engine setup

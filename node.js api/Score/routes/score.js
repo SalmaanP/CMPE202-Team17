@@ -94,6 +94,24 @@ var query="Update game SET `"+columnName+"`="+score+" where id="+id;
 
 };
 
+exports.checkRoom = function(req, res){
+
+    var room_id = req.param("id");
+    var answer;
+    query = "select * from game where id ="+room_id;
+
+    mysql.execute(function(err, result){
+
+        if(result[0].player2 == null){
+            answer = {"ready":"no"};
+        } else {
+            answer = {"ready":"yes"};
+        }
+        res.send(JSON.stringify(answer));
+
+    }, query);
+
+};
 
 exports.getGame = function (req, res) {
 
