@@ -4,64 +4,6 @@
 
 var mysql = require('./mysql');
 
-/*
- exports.setScores=function(req,res){
- "use strict";
- var username=req.param("username");
- var score=req.param("score");
- var usernameArray=new Array();
- var scoreArray=new Array();
- var finalArray = new Array();
-
-
- var query="insert into user(username,score) values('"+username+ "','" + score + "');";
- console.log(query);
- mysql.execute(function(err,results){
- if(err){
- throw err;
- }
- else
- {
-
- console.log("inserted");
- var dataEntry = "select * from user Order by score LIMIT 10;";
- console.log(dataEntry);
-
-
- mysql.execute(function (err, results) {
- if (err) {
- throw err;
- }
- else {
- console.log(results[0]);
- console.log(results.length);
-
- if (results.length > 0) {
-
- for (let i = 0; i < results.length; i++) {
-
-
-
-
- usernameArray[i] = results[i].username;
- scoreArray[i] = results[i].score;
-
-
- }
- res.send(usernameArray+"#"+scoreArray);
-
-
-
- }
- }
- }, dataEntry);
- }
- },query);
-
- };
- */
-
-
 exports.setScores = function (req, res) {
     "use strict";
     var columnName;
@@ -69,43 +11,46 @@ exports.setScores = function (req, res) {
     var score = req.param("score");
     var id = req.param("id");
     var playerNumber = req.param("playernumber");
-    if(playerNumber==1)
-    {
-         columnName = "player1_score";
+    if (playerNumber == 1) {
+        columnName = "player1_score";
     }
-    else
-    {
-        columnName="player2_score";
+    else {
+        columnName = "player2_score";
     }
 
+    var insertGlobal = "Insert into user(player,score) Values ('" + player + "','" + score + "')";
+    var query = "Update game SET `" + columnName + "`=" + score + " where id=" + id;
 
-var query="Update game SET `"+columnName+"`="+score+" where id="+id;
+    mysql.execute(function (err, result1) {
+
+        console.log("Inserted");
+    }, insertGlobal);
 
     mysql.execute(function (err, result) {
 
-        var query1 = "Select * from game where id="+id;
-        mysql.execute(function (err,result1) {
+        var query1 = "Select * from game where id=" + id;
+        mysql.execute(function (err, result1) {
 
             res.send(result1);
-        },query1)
+        }, query1)
 
-    },query);
+    }, query);
 
 
 };
 
-exports.checkRoom = function(req, res){
+exports.checkRoom = function (req, res) {
 
     var room_id = req.param("id");
     var answer;
-    query = "select * from game where id ="+room_id;
+    query = "select * from game where id =" + room_id;
 
-    mysql.execute(function(err, result){
+    mysql.execute(function (err, result) {
 
-        if(result[0].player2 == null){
-            answer = {"ready":"no"};
+        if (result[0].player2 == null) {
+            answer = {"ready": "no"};
         } else {
-            answer = {"ready":"yes"};
+            answer = {"ready": "yes"};
         }
         res.send(JSON.stringify(answer));
 
@@ -148,28 +93,19 @@ exports.getGame = function (req, res) {
 
     }, query);
 
+};
 
-    /*    if(query){
-     //joingame
-     query2 = "insert into game player2= user";
-     send to client player1 and player2 and id;
-     } else {
-     //create game
-     query2 = "insert into game player1 = user, player2 = null";
-     send response to await
-     client wait, send call every 5 sec;
-     }*/
 
-}
+exports.topTen = function (req, res) {
 
-/*exports.setscorenew = function(req, res){
+   var  query = "select * from user Order by score ASC limit 10";
+console.log(query);
+    mysql.execute(function (err, result) {
 
- get id ,player name, score from request;
- query = "insert into game where id is id and player name is player name, score ";
- if player2 score not yet, send win, else send lose;
- send top 10 also;
+        res.send(result);
 
- }*/
+    }, query);
 
+};
 
 
