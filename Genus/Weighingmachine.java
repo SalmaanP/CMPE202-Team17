@@ -21,7 +21,7 @@ public class Weighingmachine extends Actor
        if(dragged2==null&&ball2_set==false)
             dragged2=(Ball)getOneObjectAtOffset(+80, -7, Ball.class);
        
-       if(lockedBalls==6)
+       if(lockedBalls>4)
        {
            SortingWorld world=(SortingWorld)this.getWorld();
            MainScreen screen= (MainScreen)world.screen;
