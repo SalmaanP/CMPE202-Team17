@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import org.json.*;
 /**
  * Write a description of class fourth_letme here.
  * 
@@ -27,10 +27,24 @@ public class fourth_letme extends assets
             int mouseY = mouse.getY();
             if(mouseX > 400 && mouseX < 600 && mouseY > 370 && mouseY < 430){
                 this.setImage("4_letme_selected.png");
-                if(Greenfoot.mouseClicked(this)){
-                   
-                    IScreenHandler screen = world.getScreen();
-                    screen.setNextScreen(MainScreen);
+                if(Greenfoot.mouseClicked(this))
+                {
+                    String game=APIHelper.getGame(world.getUser());
+                    //System.out.println(game);
+                    JSONObject obj=new JSONObject(game);
+                    System.out.println(obj.get("id"));
+                    world.setRoomID((Integer)obj.get("id"));
+                    JSONObject roomStatus=new JSONObject(APIHelper.checkRoom(world.getRoomID()));
+                    if(roomStatus.get("ready").equals("yes"))
+                    {
+                        IScreenHandler screen = world.getScreen();
+                        screen.setNextScreen(MainScreen);
+                    }
+                    else
+                    {
+                        System.out.println("Not ready");
+                    }
+                    
                 }
             } else {
                 this.setImage("4_letme.png");

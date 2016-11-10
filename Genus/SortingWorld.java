@@ -22,6 +22,7 @@ public class SortingWorld extends World
     IScreenHandler instructionScreen = new InstructionScreen(this);
     IScreenHandler screen = welcomeScreen;
     private String user;
+    private int roomId;
     
     public SortingWorld()
     {    
@@ -54,5 +55,15 @@ public class SortingWorld extends World
     public String getUser()
     {
         return user;
+    }
+    
+    public void setRoomID(int id)
+    {
+        roomId=id;
+    }
+    
+    public int getRoomID()
+    {
+        return roomId;
     }
 }
