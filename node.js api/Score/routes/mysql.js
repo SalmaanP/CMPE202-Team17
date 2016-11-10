@@ -19,8 +19,8 @@ var ConnectionPool = mysql.createPool({
 	waitForConnection: true,
 	host: 'localhost',
 	user: 'root',
-	password: 'skbhatt444',
-	database: 'Genus'
+	password: 'root',
+	database: 'genus'
 });
 
 
@@ -31,8 +31,8 @@ function CreateConnectionPool() {
 		var connection = mysql.createConnection({
 			host: 'localhost',
 			user: 'root',
-			password: 'skbhatt444',
-			database: 'ebay'
+			password: 'root',
+			database: 'genus'
 		});
 		pool.push(connection);
 

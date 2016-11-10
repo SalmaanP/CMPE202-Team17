@@ -52,7 +52,8 @@ exports.checkRoom = function (req, res) {
         } else {
             answer = {"ready": "yes"};
         }
-        res.send(JSON.stringify(answer));
+       //res.send(JSON.stringify(answer));
+        res.send(answer);
 
     }, query);
 
@@ -76,7 +77,7 @@ exports.getGame = function (req, res) {
 
                 console.log(result2.insertId);
                 var answer = {"id": result2.insertId, "player1": player, "player2": null, "playernumber": 1};
-                res.send(JSON.stringify(answer));
+                res.send(answer);
 
             }, query2);
 
@@ -86,7 +87,7 @@ exports.getGame = function (req, res) {
             mysql.execute(function (err, result3) {
                 console.log(result3);
                 var answer = {"id": result[0].id, "player1": result[0].player1, "player2": player, "playernumber": 2};
-                res.send(JSON.stringify(answer));
+                res.send(answer);
             }, query3);
 
         }
@@ -99,7 +100,6 @@ exports.getGame = function (req, res) {
 exports.topTen = function (req, res) {
 
    var  query = "select * from user Order by score ASC limit 10";
-console.log(query);
     mysql.execute(function (err, result) {
 
         res.send(result);
