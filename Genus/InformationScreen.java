@@ -31,7 +31,7 @@ public class InformationScreen extends Screen
        this.sortingWorld.setBackground(new GreenfootImage("2_background_1.png"));
        this.sortingWorld.addObject(new second_goahead(this.sortingWorld), 910,520);
        input=new second_input();
-       this.sortingWorld.addObject(new second_input(), 650,450);
+       this.sortingWorld.addObject(input, 650,450);
 
    }
    

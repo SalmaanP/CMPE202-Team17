@@ -21,7 +21,7 @@ public class APIHelper
        String results="";
        try
        {
-        URL url = new URL("http://localhost:3000/"+endpoint);
+        URL url = new URL("http://35.163.98.53:3000/"+endpoint);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Accept", "application/json");
@@ -54,8 +54,7 @@ public class APIHelper
         e.printStackTrace();
 
       }
-      return results;
-    }
+      return results;    }
    
     public static String getGame(String username)
    {
@@ -72,11 +71,22 @@ public class APIHelper
        return callAPI("checkRoom?id="+roomId);
    }
    
+   public static String topTen()
+   {
+       return callAPI("topTen");
+   }
+   
+   public static String getRank(int score)
+   {
+       return callAPI("getRank?score="+score);
+   }
+   
    public static void main(String[] args)
    {
        String results=APIHelper.getGame("Karan");
        System.out.println(results);
        System.out.println(APIHelper.checkRoom(13));
        System.out.println(APIHelper.setScores("Karan",2,10,13));
+       System.out.println(APIHelper.topTen());
     }
 }

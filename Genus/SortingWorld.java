@@ -23,6 +23,7 @@ public class SortingWorld extends World
     IScreenHandler screen = welcomeScreen;
     private String user;
     private int roomId;
+    private int playerNumber;
     
     public SortingWorld()
     {    
@@ -65,5 +66,15 @@ public class SortingWorld extends World
     public int getRoomID()
     {
         return roomId;
+    }
+    
+    public void setPlayerNumber(int playerNumber)
+    {
+        this.playerNumber=playerNumber;
+    }
+    
+    public int getPlayerNumber()
+    {
+        return this.playerNumber;
     }
 }
