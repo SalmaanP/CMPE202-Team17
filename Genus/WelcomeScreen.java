@@ -31,19 +31,8 @@ public class WelcomeScreen extends Screen
    
    public void showScreen()
    {
-      
-       //asset a2 = new asset();
-       //asset a3 = new asset();
-      // asset a4 = new asset();
-      // a2.setImage("1_title.png"); 
-      // a2.setImage("1_scale.png"); 
-      // a3.setImage("1_forkhead.png"); 
-       // a4.setImage("1_cmpe.png"); 
+       
         this.sortingWorld.setBackground(new GreenfootImage("1_background.png"));
-        
-       // this.sortingWorld.addObject(a2, 500,250);
-       // this.sortingWorld.addObject(a3, 135,540);
-       // this.sortingWorld.addObject(a4, 925,550);
         this.sortingWorld.addObject(new first_playnow(this.sortingWorld), 500,400);
 
    }
