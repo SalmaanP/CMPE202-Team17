@@ -15,9 +15,7 @@ public class WelcomeScreen extends Screen
    
    public WelcomeScreen(SortingWorld world)
    {
-       super(world);
-       
-       
+       super(world);      
    } 
     
     
@@ -31,10 +29,8 @@ public class WelcomeScreen extends Screen
    
    public void showScreen()
    {
-       
         this.sortingWorld.setBackground(new GreenfootImage("1_background.png"));
         this.sortingWorld.addObject(new first_playnow(this.sortingWorld), 500,400);
-
    }
    
    public void removeScreen(){

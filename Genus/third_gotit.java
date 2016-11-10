@@ -27,8 +27,8 @@ public class third_gotit extends assets
         if(mouse!=null){
             int mouseX = mouse.getX();
             int mouseY = mouse.getY();
-            if(mouseX > 400 && mouseX < 600 && mouseY > 370 && mouseY < 430){
-                this.setImage("3_gotit_selected.png");
+            if(mouseX > 885 && mouseX < 935 && mouseY > 495 && mouseY < 555){
+                this.setImage("2_goahead.png");
                 if(Greenfoot.mouseClicked(this)){
                    
                     IScreenHandler screen = world.getScreen();
