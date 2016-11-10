@@ -10,7 +10,7 @@ import java.awt.Toolkit;
 public class second_input extends assets
 {
    static final int MAX_INPUT_LENGTH = 20;
-   String text = "Super Awesome Person";
+   String text = "---------";
     
    public second_input()
    {

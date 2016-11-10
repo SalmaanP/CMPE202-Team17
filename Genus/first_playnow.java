@@ -24,7 +24,7 @@ public class first_playnow extends assets
         if(mouse!=null){
             int mouseX = mouse.getX();
             int mouseY = mouse.getY();
-            if(mouseX > 400 && mouseX < 600 && mouseY > 420 && mouseY < 480){
+            if(mouseX > 400 && mouseX < 600 && mouseY > 390 && mouseY < 450){
                 this.setImage("1_playnow_gold.png");
                 if(Greenfoot.mouseClicked(this)){
                    
