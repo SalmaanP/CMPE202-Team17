@@ -57,7 +57,7 @@ public class fourth_letme extends assets
                                 System.out.println("going to sleep");
                                 try
                                 {
-                                    Thread.sleep(5000);
+                                    Thread.sleep(500);
                                 }
                                 catch(Exception e)
                                 {

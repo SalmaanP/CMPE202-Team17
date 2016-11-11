@@ -52,7 +52,7 @@ public class MainScreen  extends Screen
            temp_ball.setPos(temp_pos);
            
            //temp_ball.setImage("ball_"+i+"_"+temp_pos);
-           temp_ball.setImage("ball_"+(i-1)+"_"+rand.nextInt(4)+".png");
+           temp_ball.setImage("ball_"+(i-1)+"_"+rand.nextInt(5)+".png");
            System.out.println(temp_pos + " ");
            temp_pos = (((3*temp_pos)-1)*50);
            world.addObject(temp_ball,temp_pos ,500 );

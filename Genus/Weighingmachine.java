@@ -80,8 +80,11 @@ public class Weighingmachine extends Actor
             }
             ball1_set = false;
             ball2_set = false;
-            
-            Greenfoot.delay(100);
+            try{
+                Thread.sleep(650);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
             swapBalls(dragged1, dragged2);
             this.tilt("Equilibrium", dragged1, dragged2);
             dragged1=null;
