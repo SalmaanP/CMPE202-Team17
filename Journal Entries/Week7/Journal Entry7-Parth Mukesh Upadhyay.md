@@ -12,5 +12,3 @@ We created a Node.JS backend application that would handle creation of multiplay
 Every players score is stored in MySql database for generating leader board and player rank.
 We hosted our backend application on amazon EC2 server and access the RESTful api's in our greenfoot game.
 We tested our application rigorously to find bugs and solved them.
-
-Next week we plan to implement different design patterns.
