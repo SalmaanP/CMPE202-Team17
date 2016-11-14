@@ -32,16 +32,26 @@ public class LeaderBoardScreen extends Screen
        JSONArray topTenScores=new JSONArray(APIHelper.topTen());
        System.out.println(topTenScores);
      
-       for(int i=0;i<topTenScores.length();i++)
+       try
+       {
+           
+       for(int i=0;i<5;i++)
        {
            JSONObject temp=(JSONObject)topTenScores.get(i);
-           Text name= new Text();
-           Text score=new Text();
-           name.setMessage(temp.getString("player"));
-           score.setMessage(""+temp.getInt("score"));
-           world.addObject(name,150,(i+1)*100);
-           world.addObject(score,300,(i+1)*100);
-        }
+                Text name= new Text();
+                Text score=new Text();
+                name.setMessage(temp.getString("player"));
+                score.setMessage(""+temp.getInt("score"));
+                world.addObject(name,150,(i+1)*100);
+                world.addObject(score,300,(i+1)*100);
+           
+           
+       }
+    }
+    catch(Exception e)
+    {
+        System.out.println("hI");
+    }
         
         JSONObject rankJSON= (JSONObject)new JSONArray(APIHelper.getRank(timer)).get(0);
         Text rank= new Text();
