@@ -20,7 +20,7 @@ public class SortingWorld extends World
     IScreenHandler nameScreen = new NameScreen(this);
     IScreenHandler informationScreen = new InformationScreen(this);
     IScreenHandler instructionScreen = new InstructionScreen(this);
-    IScreenHandler screen = welcomeScreen;
+    IScreenHandler screen = leaderBoardScreen;
     private String user;
     private int roomId;
     private int playerNumber;
