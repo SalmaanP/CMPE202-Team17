@@ -40,14 +40,12 @@ public class Timer extends Actor
         int secs = time % 60;
         time = (time - secs) / 60;
         int mins = time % 60;
-        int hrs = (time - mins) / 24;
-        String h = "00"+hrs;
-        while (h.length() > 2) h = h.substring(1);
+       
         String m = "00"+mins;
         while (m.length() > 2) m = m.substring(1);
         String s = "00" + secs;
         while (s.length() > 2) s = s.substring(1);
-        String text = prefix + h + "h : " + m + "m : " + s + "s";
+        String text = prefix + m + "m : " + s + "s";
         GreenfootImage textImage = new GreenfootImage(text, 20, Color.WHITE, new Color(0,0,0,0));
         GreenfootImage image = new GreenfootImage(textImage.getWidth()+20, textImage.getHeight()+10);
         image.drawRect(0, 0, image.getWidth()-1, image.getHeight()-1);
