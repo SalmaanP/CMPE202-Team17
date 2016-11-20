@@ -13,10 +13,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-public class APIHelper  
+public class APIHelper  implements APIHelperInterface
 {
    
-   private static String callAPI(String endpoint)
+   public String callAPI(String endpoint)
    {
        String results="";
        try
@@ -56,37 +56,29 @@ public class APIHelper
       }
       return results;    }
    
-    public static String getGame(String username)
+    public String getGame(String username)
    {
        return callAPI("getGame?player="+username);
    }
     
-   public static String setScores(String player,int playernumber,int score, int id)
+   public String setScores(String player,int playernumber,int score, int id)
    {
        return callAPI("setScores?player="+player+"&id="+id+"&playernumber="+playernumber+"&score="+score);
    }
     
-   public static String checkRoom(int roomId)
+   public String checkRoom(int roomId)
    {
        return callAPI("checkRoom?id="+roomId);
    }
    
-   public static String topTen()
+   public String topTen()
    {
        return callAPI("topTen");
    }
    
-   public static String getRank(int score)
+   public String getRank(int score)
    {
        return callAPI("getRank?score="+score);
    }
    
-   public static void main(String[] args)
-   {
-       String results=APIHelper.getGame("Karan");
-       System.out.println(results);
-       System.out.println(APIHelper.checkRoom(13));
-       System.out.println(APIHelper.setScores("Karan",2,10,13));
-       System.out.println(APIHelper.topTen());
-    }
 }

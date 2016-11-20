@@ -11,6 +11,7 @@ public class fourth_letme extends assets
     private SortingWorld world;
     private IScreenHandler MainScreen = new MainScreen(world);
     private boolean wait=true;
+    private APIHelper helper= new APIHelper();
     /**
      * Act - do whatever the fourth_letme wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,6 +23,7 @@ public class fourth_letme extends assets
     
     public void act()
     {
+        
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(mouse!=null){
             int mouseX = mouse.getX();
@@ -30,11 +32,11 @@ public class fourth_letme extends assets
                 this.setImage("4_letme_selected.png");
                 if(Greenfoot.mouseClicked(this))
                 {
-                    JSONObject obj=new JSONObject(APIHelper.getGame(world.getUser()));
+                    JSONObject obj=new JSONObject(helper.getGame(world.getUser()));
                     System.out.println(obj.get("id"));
                     world.setRoomID((Integer)obj.get("id"));
                     world.setPlayerNumber((Integer)obj.get("playernumber"));
-                    JSONObject roomStatus=new JSONObject(APIHelper.checkRoom(world.getRoomID()));
+                    JSONObject roomStatus=new JSONObject(helper.checkRoom(world.getRoomID()));
                     if(roomStatus.get("ready").equals("yes"))
                     {
                         IScreenHandler screen = world.getScreen();
@@ -45,7 +47,7 @@ public class fourth_letme extends assets
                         System.out.println("Not ready");
                         while(wait){
                             
-                            JSONObject ready=new JSONObject(APIHelper.checkRoom(world.getRoomID()));
+                            JSONObject ready=new JSONObject(helper.checkRoom(world.getRoomID()));
                             if(ready.get("ready").equals("yes"))
                             {
                                 IScreenHandler screen = world.getScreen();

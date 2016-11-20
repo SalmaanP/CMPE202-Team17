@@ -28,8 +28,9 @@ public class LeaderBoardScreen extends Screen
    {
        world.setBackground(new GreenfootImage("5_background.png"));
        System.out.println("Time taken to sort:"+timer);
-       APIHelper.setScores(world.getUser(), world.getPlayerNumber(), timer, world.getRoomID());
-       JSONArray topTenScores=new JSONArray(APIHelper.topTen());
+       APIHelper helper=new APIHelper();
+      helper.setScores(world.getUser(), world.getPlayerNumber(), timer, world.getRoomID());
+       JSONArray topTenScores=new JSONArray(helper.topTen());
        System.out.println(topTenScores);
      
        try
@@ -53,7 +54,7 @@ public class LeaderBoardScreen extends Screen
         System.out.println("hI");
     }
         
-        JSONObject rankJSON= (JSONObject)new JSONArray(APIHelper.getRank(timer)).get(0);
+        JSONObject rankJSON= (JSONObject)new JSONArray(helper.getRank(timer)).get(0);
         Text rank= new Text();
         rank.setMessage("RANK:"+rankJSON.getInt("rank"));
         world.addObject(rank,500, 200);
