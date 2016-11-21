@@ -6,18 +6,15 @@
 
 # Objective
 
-> The team take an activity from CSUnplugged.org to create a game based on it and help teach students from non-cs backgrounds in understanding 
-computer science concepts.
+> The team took an activity (Bubble Sort) from CSUnplugged.org and created a game based on it, to help teach students from non-cs background understand basic computer science concepts.
 
 # Lore
 
 * You start off as an agent of a top secret organization with its aim in saving the world from annihilation. You must save the world from doom while the world sleeps sweetly. 
 
-* This time, its Coffee. An alien race, code-named "TARS" has set its eyes on Earth's own elixir - it's large and varied reserve of coffee. It's upto you to save mankind 
-and its productivity or else humanity is doomed for certain.
+* This time, its Coffee. An alien race, code-named "TARS" has set its eyes on Earth's own elixir - it's large and varied reserve of coffee. It's upto you to save mankind and its productivity or else humanity is doomed for certain.
 
-* Are you up for this challenge? Save the earth and do it as early as possible to get featured in the organizations hall of fame and be remembered for eternity. Go head to 
-head with an alien in the multiplayer mode and see how you fare.
+* Are you up for this challenge? Save the earth and do it as early as possible to get featured in the organization's hall of fame and be remembered for eternity. Go head to head with an alien in the multiplayer mode and see how you fare.
 
 * Completed the game? Test your agent skills for a special easter egg and find more information about TARS and where they come from.
 
@@ -31,7 +28,7 @@ head with an alien in the multiplayer mode and see how you fare.
 
 * The objects need to be placed from lightest to heaviest starting from left, and ending towards right.
 
-* Fight for the leaderboard position with players across the world (^and ^the ^universe)
+* Fight for the leaderboard position with players across the world.
 
 # Team Name: 
 >  **Forkhead**
