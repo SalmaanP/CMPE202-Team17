@@ -1,4 +1,4 @@
-##### This repository contains the code for team project of CMPE202 Fall 2016.
+##### This repository contains the code for CMPE202 Fall 2016 team project.
 
 
 ![alt text] (https://github.com/SalmaanP/CMPE202-Team17/blob/master/ConceptArt/CoverPage.png "Cover Page")
