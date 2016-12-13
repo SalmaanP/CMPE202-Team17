@@ -22,7 +22,7 @@ public class LeaderBoardScreen extends Screen {
         this.world = world;
 
     }
-<<<<<<< HEAD
+
 
     /**
      * This method sets the next screen to be shown.

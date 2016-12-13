@@ -51,7 +51,7 @@ public class APIHelper {
             e.printStackTrace();
 
         }
-<<<<<<< HEAD
+
         return results;
     }
 
@@ -99,42 +99,7 @@ public class APIHelper {
         System.out.println(APIHelper.setScores("Karan", 2, 10, 13));
         System.out.println(APIHelper.topTen());
     }
-=======
-        catch (MalformedURLException e) {
 
-        e.printStackTrace();
+  }
 
-      } catch (IOException e) {
-
-        e.printStackTrace();
-
-      }
-      return results;    }
-   
-    public String getGame(String username)
-   {
-       return callAPI("getGame?player="+username);
-   }
-    
-   public String setScores(String player,int playernumber,int score, int id)
-   {
-       return callAPI("setScores?player="+player+"&id="+id+"&playernumber="+playernumber+"&score="+score);
-   }
-    
-   public String checkRoom(int roomId)
-   {
-       return callAPI("checkRoom?id="+roomId);
-   }
-   
-   public String topTen()
-   {
-       return callAPI("topTen");
-   }
-   
-   public String getRank(int score)
-   {
-       return callAPI("getRank?score="+score);
-   }
-   
->>>>>>> origin/master
-}
+       
