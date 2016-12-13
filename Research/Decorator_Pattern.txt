@@ -1,0 +1,14 @@
+Decorator pattern allows a user to add new functionality to an existing object without altering its structure.
+
+This type of design pattern comes under structural pattern as this pattern acts as a wrapper to existing class.
+
+This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.
+
+Extending an object’s functionality can be done statically (at compile time) by using inheritance
+however it might be necessary to extend an object’s functionality dynamically (at runtime) as an object is used.
+
+Consider the typical example of a graphical window. 
+To extend the functionality of the graphical window for example by adding a frame to the window,
+would require extending the window class to create a FramedWindow class. 
+To create a framed window it is necessary to create an object of the FramedWindow class.
+However it would be impossible to start with a plain window and to extend its functionality at runtime to become a framed window.

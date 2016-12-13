@@ -22,6 +22,7 @@ public class LeaderBoardScreen extends Screen {
         this.world = world;
 
     }
+<<<<<<< HEAD
 
     /**
      * This method sets the next screen to be shown.
@@ -49,6 +50,31 @@ public class LeaderBoardScreen extends Screen {
                 JSONObject temp = (JSONObject) topTenScores.get(i);
                 Text name = new Text();
                 Text score = new Text();
+=======
+   
+   public void setNextScreen(IScreenHandler nextScreen)
+   {
+       this.nextScreen=nextScreen;
+   }
+   
+   public void showScreen()
+   {
+       world.setBackground(new GreenfootImage("5_background.png"));
+       System.out.println("Time taken to sort:"+timer);
+       APIHelper helper=new APIHelper();
+      helper.setScores(world.getUser(), world.getPlayerNumber(), timer, world.getRoomID());
+       JSONArray topTenScores=new JSONArray(helper.topTen());
+       System.out.println(topTenScores);
+     
+       try
+       {
+           
+       for(int i=0;i<5;i++)
+       {
+           JSONObject temp=(JSONObject)topTenScores.get(i);
+                Text name= new Text();
+                Text score=new Text();
+>>>>>>> origin/master
                 name.setMessage(temp.getString("player"));
                 score.setMessage("" + temp.getInt("score"));
                 world.addObject(name, 150, (i + 1) * 110);
@@ -77,6 +103,7 @@ public class LeaderBoardScreen extends Screen {
         scores = arr[1].split(",");
 
     }
+<<<<<<< HEAD
 
     /**
      * This method is used to remove the objects from the current screen.
@@ -84,6 +111,27 @@ public class LeaderBoardScreen extends Screen {
     public void removeScreen() {
         world.removeObjects(world.getObjects(Text.class));
 
+=======
+        
+        JSONObject rankJSON= (JSONObject)new JSONArray(helper.getRank(timer)).get(0);
+        Text rank= new Text();
+        rank.setMessage("RANK:"+rankJSON.getInt("rank"));
+        world.addObject(rank,500, 200);
+       //write code for name screen
+   }
+   
+   public void setTimer(int time)
+   {
+       timer=time;
+   }
+   
+   private void parseLeaderBoardData()
+   {
+       String arr[]=leaderBoardData.split("#");
+       names=arr[0].split(",");
+       scores=arr[1].split(",");
+       
+>>>>>>> origin/master
     }
 
 }

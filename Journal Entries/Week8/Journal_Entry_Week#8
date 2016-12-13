@@ -1,0 +1,10 @@
+Journal Entry week#8
+
+•	This week had the final week of the sprint. We focused on testing the game from start to end. 
+•	We assigned the tasks of testing the same module to multiple team members and obtained regular feedback from them in order to make sure that the game is completely bug-free.
+•	We also had a demo of the game at Lowell Elementary School for a session to teach 4th graders what sorting is all about in computers, how bubble sort works and translates into the real world, and finally have some fun while playing our game.
+•	The main task was to make sure the lobbies of the multiplayer game and all the sessions were synchronized.
+•	We also faced some challenges during the refactoring of the code for implementing the design patterns.
+•	But we made sure that the code is thoroughly tested after implementing the design patterns.
+•	In the end of the sprint we obtained feedback from our seniors about the game and the feedback was positive and satisfactory. 
+•	The systematic development approach helped us in learning the Java design patterns and also the greenfoot platform.
