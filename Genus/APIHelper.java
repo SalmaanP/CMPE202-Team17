@@ -13,28 +13,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-<<<<<<< HEAD
-=======
-import java.nio.charset.Charset;
 
-public class APIHelper  implements APIHelperInterface
-{
-   
-   public String callAPI(String endpoint)
-   {
-       String results="";
-       try
-       {
-        URL url = new URL("http://35.163.98.53:3000/"+endpoint);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.setRequestProperty("Accept", "application/json");
-        
-        if (conn.getResponseCode() != 200) {
-            throw new RuntimeException("Failed : HTTP error code : "
-                    + conn.getResponseCode());
-        }
->>>>>>> origin/master
 
 public class APIHelper {
 

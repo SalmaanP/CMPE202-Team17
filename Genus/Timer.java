@@ -35,20 +35,7 @@ public class Timer extends Actor {
         int secs = time % 60;
         time = (time - secs) / 60;
         int mins = time % 60;
-<<<<<<< HEAD
-        int hrs = (time - mins) / 24;
-        String h = "00" + hrs;
-        while (h.length() > 2) h = h.substring(1);
-        String m = "00" + mins;
-        while (m.length() > 2) m = m.substring(1);
-        String s = "00" + secs;
-        while (s.length() > 2) s = s.substring(1);
-        String text = prefix + h + "h : " + m + "m : " + s + "s";
-        GreenfootImage textImage = new GreenfootImage(text, 20, Color.WHITE, new Color(0, 0, 0, 0));
-        GreenfootImage image = new GreenfootImage(textImage.getWidth() + 20, textImage.getHeight() + 10);
-        image.drawRect(255, 255, image.getWidth() - 1, image.getHeight() - 1);
-        image.drawImage(textImage, (image.getWidth() - textImage.getWidth()) / 2, (image.getHeight() - textImage.getHeight()) / 2);
-=======
+
        
         String m = "00"+mins;
         while (m.length() > 2) m = m.substring(1);
@@ -59,7 +46,6 @@ public class Timer extends Actor {
         GreenfootImage image = new GreenfootImage(textImage.getWidth()+20, textImage.getHeight()+10);
         image.drawRect(0, 0, image.getWidth()-1, image.getHeight()-1);
         image.drawImage(textImage, (image.getWidth()-textImage.getWidth())/2, (image.getHeight()-textImage.getHeight())/2);
->>>>>>> origin/master
         setImage(image);
     }
 
