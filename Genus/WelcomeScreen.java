@@ -34,13 +34,22 @@ public class WelcomeScreen extends Screen {
      *
      */
     public void showScreen() {
+       
+        this.sortingWorld.addObject(new first_playnow(this.sortingWorld), 500, 400);
+        
+        // Please unncomment this file if you face java heap error.
         // this.sortingWorld.setBackground(new GreenfootImage("1_background.png"))
+
+        //If you uncomment the above line then comment the next 3 lines as well. SORRY :p
+        // Heap error is a bitch.
         asset a1 = new asset();
         a1.setImage("1_data.png");
-
-        this.sortingWorld.addObject(new Background(this.sortingWorld), 500, 275);
         this.sortingWorld.addObject(a1, 540, 320);
-        this.sortingWorld.addObject(new first_playnow(this.sortingWorld), 500, 400);
+       
+
+        // Please comment this line if you face java heap error.
+        this.sortingWorld.addObject(new Background(this.sortingWorld), 500, 275);
+        
 
     }
 
