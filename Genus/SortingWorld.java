@@ -1,80 +1,78 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is the main World of the game - Sorting World.
+ * Here objects are initialized that are used globally.
+ *
+ * @author (ForkHead)
+ * @version (1.0.0)
  */
-public class SortingWorld extends World
-{
+public class SortingWorld extends World {
 
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    private Button startButton;
     IScreenHandler welcomeScreen = new WelcomeScreen(this);
     IScreenHandler mainScreen = new MainScreen(this);
     IScreenHandler leaderBoardScreen = new LeaderBoardScreen(this);
-    IScreenHandler nameScreen = new NameScreen(this);
+    IScreenHandler secretScreen = new SecretScreen(this);
     IScreenHandler informationScreen = new InformationScreen(this);
     IScreenHandler instructionScreen = new InstructionScreen(this);
+    IScreenHandler hintScreen = new HintScreen(this);
     IScreenHandler screen = welcomeScreen;
+    /**
+     * Constructor for objects of class MyWorld.
+     */
+    private Button startButton;
     private String user;
+    private String player2;
     private int roomId;
     private int playerNumber;
-    
-    public SortingWorld()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 600, 1); 
-        //Greenfoot.playSound("game_sound.mp3");
-        screen.showScreen(); 
-        // This goes in welcome screen
-        //ScoreBoard scoreboard = new ScoreBoard(this);
-
-       // scoreboard.setScore();
 
 
-        
+    public SortingWorld() {
+        super(1000, 600, 1);
+        Greenfoot.playSound("game_sound.mp3");
+        screen.showScreen();
     }
-    
-    public IScreenHandler getScreen(){
+
+    public IScreenHandler getScreen() {
         return screen;
     }
-    
-    public void setScreen(IScreenHandler screen){
+
+    public void setScreen(IScreenHandler screen) {
         this.screen = screen;
     }
-    
-    public void setUser(String username)
-    {
-        user=username;
-    }
-    
-    public String getUser()
-    {
+
+    public String getUser() {
         return user;
     }
-    
-    public void setRoomID(int id)
-    {
-        roomId=id;
+
+    public void setUser(String username) {
+        user = username;
     }
-    
-    public int getRoomID()
-    {
+
+    public int getRoomID() {
         return roomId;
     }
-    
-    public void setPlayerNumber(int playerNumber)
-    {
-        this.playerNumber=playerNumber;
+
+    public void setRoomID(int id) {
+        roomId = id;
     }
-    
-    public int getPlayerNumber()
-    {
+
+    public int getPlayerNumber() {
         return this.playerNumber;
+    }
+
+    public void setPlayerNumber(int playerNumber) {
+        this.playerNumber = playerNumber;
+    }
+
+    public String getPlayer2() {
+
+        return this.player2;
+    }
+
+    public void setPlayer2(String player2) {
+
+        this.player2 = player2;
+
     }
 }

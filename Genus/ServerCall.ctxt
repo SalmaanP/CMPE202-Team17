@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ServerCall
+comment0.text=\n\ Write\ a\ description\ of\ class\ ServerCall\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=world
+comment1.target=void\ ServerCall(SortingWorld)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

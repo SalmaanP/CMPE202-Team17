@@ -1,11 +1,11 @@
 /**
- * Write a description of class IScreenHandler here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This interface defines the method that all the screens will implement.
+ *
+ * @author (Forkhead)
+ * @version (1.0.0)
  */
-public interface IScreenHandler  
-{
+public interface IScreenHandler {
     public void showScreen();
+
     public void setNextScreen(IScreenHandler nextScreen);
 }

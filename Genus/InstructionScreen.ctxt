@@ -1,12 +1,15 @@
 #BlueJ class context
 comment0.target=InstructionScreen
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ InstructionScreen\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ This\ class\ represents\ the\ "INSTRUCTION\ SCREEN"\n\n\ @author\ (Forkhead)\n\ @version\ (1.0.0)\n
 comment1.params=world
 comment1.target=InstructionScreen(SortingWorld)
 comment2.params=nextScreen
 comment2.target=void\ setNextScreen(IScreenHandler)
+comment2.text=\n\ This\ method\ sets\ the\ next\ screen\ to\ be\ shown.\n
 comment3.params=
 comment3.target=void\ showScreen()
+comment3.text=\n\ This\ method\ shows\ the\ objects\ on\ current\ screen.\n
 comment4.params=
 comment4.target=void\ removeScreen()
+comment4.text=\n\ This\ method\ is\ used\ to\ remove\ the\ objects\ from\ the\ current\ screen.\n
 numComments=5

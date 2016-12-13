@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Hint
+comment0.text=\n\ This\ class\ is\ used\ to\ change\ the\ leaderboard\ screen\n\ to\ hint\ screen\ after\ 5\ secs.\n\n\ @author\ (Forkhead)\n\ @version\ (1.0.0)\n
+comment1.params=
+comment1.target=void\ run()
+comment2.params=world
+comment2.target=Hint(SortingWorld)
+comment2.text=\n\ Constructor\ -\ To\ set\ the\ hint\ class\ in\ the\ leaderboard\ screen\ but\ making\ it\ transperant.\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ Starts\ the\ thread\ for\ 5\ secs.\n
+numComments=4

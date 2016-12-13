@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=IScreenHandler
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ IScreenHandler\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ This\ interface\ defines\ the\ method\ that\ all\ the\ screens\ will\ implement.\n\n\ @author\ (Forkhead)\n\ @version\ (1.0.0)\n
 comment1.params=
 comment1.target=void\ showScreen()
 comment2.params=nextScreen

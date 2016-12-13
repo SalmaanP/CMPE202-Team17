@@ -2,7 +2,7 @@
 
 > This was the last week of the sprint cycle. When we look back at all the weeks, we have come a long way from making a design on paper to converting that into an actual game. 
 
-This week we tested our game in front of actual students of "Lowell Elementary School". It was a really fun exercise that we carried out to expose kids to the world of computer sciemce. The kids were mostly fourth and fifth graders. The group also comprised of volunteers from different domains such as Child Development, Politics etc so it made a really diverse group.
+This week we tested our game in front of actual students of "Lowell Elementary School". It was a really fun exercise that we carried out to expose kids to the world of computer science. The kids were mostly fourth and fifth graders. The group also comprised of volunteers from different domains such as Child Development, Politics etc so it made a really diverse group.
 
 All of them interact with computers in their daily life. So our task was to actually make them think that the tasks that are considered simple by us humans are how solved by the computers.
 

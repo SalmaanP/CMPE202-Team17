@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=HintScreen
+comment1.params=world
+comment1.target=HintScreen(SortingWorld)
+comment2.params=nextScreen
+comment2.target=void\ setNextScreen(IScreenHandler)
+comment2.text=\n\ This\ method\ sets\ the\ next\ screen\ to\ be\ shown.\n
+comment3.params=
+comment3.target=void\ showScreen()
+comment3.text=\n\ This\ method\ shows\ the\ objects\ on\ current\ screen.\n
+comment4.params=
+comment4.target=void\ removeScreen()
+comment4.text=\n\ This\ method\ is\ used\ to\ remove\ the\ objects\ from\ the\ current\ screen.\n
+numComments=5

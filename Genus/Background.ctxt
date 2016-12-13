@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Background
+comment0.text=\n\ This\ class\ is\ used\ to\ set\ a\ background\ gif\n\ in\ the\ first\ scree\ i.e\ the\ WelcomeScreen\ of\ the\ game.\n\n\ @author\ (Forkhead)\n\ @version\ (1.0.0)\n
+comment1.params=world
+comment1.target=Background(SortingWorld)
+comment1.text=\n\ Constructor\ for\ the\ class\ where\ it\ takes\ world\ as\ an\ input\ and\ loads\ the\ gif\ image.\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ call\ to\ set\ the\ gif\ image\ during\ runtime.\n
+numComments=3

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Loader
+comment0.text=\n\ This\ class\ is\ used\ to\ implement\ the\ loader\ on\ the\ "WAITING\ SCREEN"\n\n\ @author\ (Forkhead)\n\ @version\ (1.0.0)\n
+comment1.params=
+comment1.target=void\ run()
+comment2.params=world
+comment2.target=Loader(SortingWorld)
+comment2.text=\n\ Act\ -\ Load\ the\ gif\ element\ in\ the\ "WAITING\ SCREEN"\n
+comment3.params=
+comment3.target=void\ act()
+numComments=4
